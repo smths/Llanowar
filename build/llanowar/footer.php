@@ -1,8 +1,3 @@
-<?php
-/**
- * @package Llanowar
- */
-?>
 <footer>
 	<div id="site-footer" class="site-footer">
 

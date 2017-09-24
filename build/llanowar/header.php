@@ -1,8 +1,3 @@
-<?php
-/**
- * @package Llanowar
- */
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>

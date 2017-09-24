@@ -1,8 +1,4 @@
 <?php
-/**
- * @package Llanowar
- */
-
 /* 投稿とコメントのRSSフィードのリンクを使用 */
 //add_theme_support('automatic-feed-links');
 

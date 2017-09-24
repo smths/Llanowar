@@ -1,8 +1,4 @@
 <?php
-/**
- * @package Llanowar
- */
-
 function remove_menus () {
 
     /* ---- 確認用 ---- */

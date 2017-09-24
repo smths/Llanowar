@@ -1,8 +1,4 @@
 <?php
-/**
- * @package Llanowar
- */
-
 /* サイト全体の投稿とコメントに関するRSSフィードへのリンクの非表示 */
 remove_action('wp_head', 'feed_links', 2);
 
