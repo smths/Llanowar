@@ -24,7 +24,6 @@ require_once get_template_directory() . '/inc/custom-posts-taxonomy.php';
 require_once get_template_directory() . '/inc/admin-page-theme-setting.php';
 
 
-
 /* ---- その他 ---- */
 
 ?>

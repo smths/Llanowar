@@ -1,2 +1,32 @@
 // compileExpanded, expandedFilenamePattern: ../$1.css
 @charset "utf-8";
+
+/* Variable（変数） */
+@import "Variable.scss";
+
+/* Function（関数） */
+@import "Function.scss";
+
+/* Mixin */
+@import "Mixin.scss";
+
+/* Layout */
+@import "Layout/header.scss";
+@import "Layout/footer.scss";
+@import "Layout/sidebar.scss";
+@import "Layout/main.scss";
+
+/* Component */
+@import "Component/common.scss";
+
+/* Project */
+@import "Project/common.scss";
+@import "Project/single.scss";
+@import "Project/archive.scss";
+@import "Project/search.scss";
+@import "Project/index.scss";
+@import "Project/Page/common.scss";
+//複数のsingleページがあり、デザインが別れる場合は、single/common.scss,single/○○○○○.scssなどとする
+
+/* Utility */
+@import "Utility/common.scss";
