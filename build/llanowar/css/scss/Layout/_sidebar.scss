@@ -1,2 +1,56 @@
 //main: ../common-style.scss
 @charset "utf-8";
+
+.sidebar_flag{
+    display : none;
+}
+.site-sidebar{
+    position : fixed;
+    top : 0;
+    left : 100%;
+    height : 100%;
+    width : 100%;
+    max-width : 320px;
+    background-color : #aaa;
+    color : #fff;
+    transition : transform .2s;
+    @at-root{
+        @include _media_l{
+            .sidebar_flag:checked ~ &{
+                transform : translateX( -100% );
+            }
+        }
+    }
+
+    &__header{
+        position : relative;
+        height : 60px;
+        margin : 0 10px;
+        @include media_m{
+            margin : 0 20px;
+        }
+        &__close_btn{
+            position : absolute;
+            right : 0;
+            display : inline-block;
+            height : inherit;
+        }
+    }
+
+    &__main{
+        box-sizing : border-box;
+        overflow : hidden;
+        height : 100%;
+        padding-bottom : 60px;
+        margin : 0 10px;
+        @include media_m{
+            margin : 0 20px;
+        }
+    }
+}
+
+.site-sidebar_widget-area{
+    lsit-syle : none;
+    margin : 0;
+    padding : 40px 0;
+}

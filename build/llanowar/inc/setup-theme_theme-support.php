@@ -35,10 +35,10 @@ add_theme_support('post-thumbnails');
 // add_theme_support( 'customize-selective-refresh-widgets' );
 
 /* メニューを使用 */
-// add_theme_support('menus');
+add_theme_support('menus');
 
 /* ウィジェットを使用 */
-// add_theme_support('widgets');
+add_theme_support('widgets');
 
 /* カスタムヘッダーを使用 */
 //add_theme_support('custom-header');

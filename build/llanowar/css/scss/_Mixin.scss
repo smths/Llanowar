@@ -1,2 +1,41 @@
 //main: common-style.scss
 @charset "utf-8";
+
+/* ---- メディアクエリ ---- */
+
+/* タブレット(縦) */
+$media_m : 768px !default;
+/* PC */
+$media_l : 992px !default;
+/* PC(大) */
+$media_xl : 1200px !default;
+
+/* タブレット(縦)以上 */
+@mixin media_m{ @media all and ( min-width : $media_m ){ @content; } }
+/* PC以上 */
+@mixin media_l{ @media all and ( min-width : $media_l ){ @content; } }
+/* PC(大)以上 */
+@mixin media_xl{ @media all and ( min-width : $media_xl ){ @content; } }
+
+/* タブレット(縦)未満 */
+@mixin _media_m{ @media all and ( max-width : $media_m - 1 ){ @content; } }
+/* PC未満 */
+@mixin _media_l{ @media all and ( max-width : $media_l - 1 ){ @content; } }
+/* PC(大)未満 */
+@mixin _media_xl{ @media all and ( max-width : $media_xl - 1 ){ @content; } }
+
+/* cliearfix */
+@mixin clearfix{
+    &::after{
+        content : '';
+        display : block;
+        clear : both;
+    }
+}
+
+/* ul,olのリストデザイン解除 */
+@mixin list_no_indent{
+    list-style : none;
+    margin : 0;
+    padding : 0;
+}

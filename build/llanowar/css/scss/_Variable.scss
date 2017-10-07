@@ -1,6 +1,16 @@
 //main: common-style.scss
 @charset "utf-8";
 
+/* ---- Mixinの変数上書き ---- */
+// /* タブレット(縦) */
+// $media_m : 768px !default;
+// /* PC */
+// $media_l : 992px !default;
+// /* PC(大) */
+// $media_xl : 1200px !default;
+
+/* ---- 変数 ---- */
+
 /* 背景色 */
 // $body-bg: #fff !default;
 

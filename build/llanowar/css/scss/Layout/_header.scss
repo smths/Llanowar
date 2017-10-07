@@ -1,2 +1,79 @@
 //main: ../common-style.scss
 @charset "utf-8";
+
+.site-header__outer{
+    height : 60px;
+    position : relative;
+}
+.site-header{
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : inherit;
+    background-color : #aaa;
+    color : #fff;
+}
+
+.site-header_content{
+    @include clearfix;
+    height : inherit;
+    margin : 0 10px;
+    @include media_m{
+        margin : 0 20px;
+    }
+    &__logo{
+        margin : 0;
+        padding : 0;
+        line-height : 1;
+        float : left;
+        height : inherit;
+        a{
+            display : block;
+            height : inherit;
+        }
+    }
+    &__btn,&__nav{
+        float : right;
+        height : inherit;
+    }
+    &__btn{
+        a{
+            display : block;
+            height : inherit;
+        }
+        @include media_l{
+            display : none;
+        }
+    }
+    &__nav{
+        ul{
+            @include list_no_indent;
+            @include clearfix;
+            height : inherit;
+            li{
+                float : left;
+                height : inherit;
+                a{
+                    display : block;
+                    height : inherit;
+                }
+            }
+        }
+        @include _media_l{
+            display : none;
+        }
+    }
+}
+
+.header_logo{
+}
+
+.header_btn{
+    display : block;
+    cursor : pointer;
+}
+
+.header_nav{
+    margin : 0 1.6em;
+}
