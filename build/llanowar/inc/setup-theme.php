@@ -15,6 +15,8 @@ if ( ! function_exists( 'setup_theme' ) ) {
         /* 不要なコード除去 */
         require_once get_template_directory() . '/inc/setup-theme_cleanup.php';
 
+        /* その他設定 */
+        require_once get_template_directory() . '/inc/setup-theme_other.php';
 
 
 
