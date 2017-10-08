@@ -6,7 +6,46 @@
 	<div class="site-sidebar__main">
 		<div class="c-scroll_y">
 			<div class="c-scroll_y__inner">
-				<ul class="site-sidebar_widget-area"><?php dynamic_sidebar( 'common-sidebar' ); ?></ul>
+				<div class="site-sidebar__main__inner">
+					<ul class="site-sidebar_nav">
+						<li>
+							<p class="site-sidebar_nav__title">あああああああああああああああ</p>
+							<ul class="site-sidebar_nav__group">
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+							</ul>
+						</li>
+						<li>
+							<p class="site-sidebar_nav__title">ああああああ</p>
+							<ul class="site-sidebar_nav__group">
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+							</ul>
+						</li>
+						<li>
+							<p class="site-sidebar_nav__title">ああああああ</p>
+							<ul class="site-sidebar_nav__group">
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+							</ul>
+						</li>
+						<li>
+							<p class="site-sidebar_nav__title">ああああああ</p>
+							<ul class="site-sidebar_nav__group">
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+								<li><a class="c-hover_action02" href=""><span class="site-sidebar_nav__group__item"><span class="c-list_style_right_arrow">ほげほげほげほげ</span></span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

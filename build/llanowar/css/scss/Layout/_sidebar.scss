@@ -11,7 +11,6 @@
     height : 100%;
     width : 100%;
     max-width : 320px;
-    background-color : #aaa;
     color : #fff;
     transition : transform .2s;
     @at-root{
@@ -25,32 +24,70 @@
     &__header{
         position : relative;
         height : 60px;
-        margin : 0 10px;
-        @include media_m{
-            margin : 0 20px;
-        }
         &__close_btn{
             position : absolute;
             right : 0;
             display : inline-block;
             height : inherit;
+            background-color: #000;
+            padding : 0 10px;
+            @include media_m{
+                padding : 0 20px;
+            }
         }
     }
 
     &__main{
         box-sizing : border-box;
         overflow : hidden;
+        background-color : #aaa;
         height : 100%;
-        padding-bottom : 60px;
-        margin : 0 10px;
+        margin : 0;
+        padding-bottom : 6.0rem;
+        padding-left : 10px;
+        padding-right : 10px;
         @include media_m{
-            margin : 0 20px;
+            padding-left : 20px;
+            padding-right : 20px;
+        }
+        &__inner{
+            padding : 4.0rem 0;
         }
     }
 }
 
-.site-sidebar_widget-area{
+.site-sidebar_nav{
     lsit-syle : none;
-    margin : 0;
-    padding : 40px 0;
+    margin : -6rem 0 0 0;
+    padding : 0;
+    overflow : hidden;
+    & > li{
+        margin-top : 6rem;
+    }
+    &__title{
+        margin : 0;
+        padding : 0;
+        font-size : 2.0rem;
+        line-height : 1.4;
+    }
+
+    &__group{
+        lsit-syle : none;
+        margin : 0;
+        padding : 0;
+        & > li{
+            border-top : 1px dotted #000;
+            &:last-child{
+                border-bottom : 1px dotted #000;
+            }
+            & > a{
+                display : block;
+                height : inherit;
+            }
+        }
+        &__item{
+            display : block;
+            padding : 0.8em 0;
+        }
+    }
 }

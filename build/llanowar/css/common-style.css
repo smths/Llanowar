@@ -151,7 +151,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 100%;
   width: 100%;
   max-width: 320px;
-  background-color: #aaa;
   color: #fff;
   transition: transform .2s;
 }
@@ -165,13 +164,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .site-sidebar__header {
   position: relative;
   height: 60px;
-  margin: 0 10px;
-}
-
-@media all and (min-width: 768px) {
-  .site-sidebar__header {
-    margin: 0 20px;
-  }
 }
 
 .site-sidebar__header__close_btn {
@@ -179,26 +171,78 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   right: 0;
   display: inline-block;
   height: inherit;
+  background-color: #000;
+  padding: 0 10px;
+}
+
+@media all and (min-width: 768px) {
+  .site-sidebar__header__close_btn {
+    padding: 0 20px;
+  }
 }
 
 .site-sidebar__main {
   box-sizing: border-box;
   overflow: hidden;
+  background-color: #aaa;
   height: 100%;
-  padding-bottom: 60px;
-  margin: 0 10px;
+  margin: 0;
+  padding-bottom: 6.0rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media all and (min-width: 768px) {
   .site-sidebar__main {
-    margin: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
-.site-sidebar_widget-area {
+.site-sidebar__main__inner {
+  padding: 4.0rem 0;
+}
+
+.site-sidebar_nav {
+  lsit-syle: none;
+  margin: -6rem 0 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.site-sidebar_nav > li {
+  margin-top: 6rem;
+}
+
+.site-sidebar_nav__title {
+  margin: 0;
+  padding: 0;
+  font-size: 2.0rem;
+  line-height: 1.4;
+}
+
+.site-sidebar_nav__group {
   lsit-syle: none;
   margin: 0;
-  padding: 40px 0;
+  padding: 0;
+}
+
+.site-sidebar_nav__group > li {
+  border-top: 1px dotted #000;
+}
+
+.site-sidebar_nav__group > li:last-child {
+  border-bottom: 1px dotted #000;
+}
+
+.site-sidebar_nav__group > li > a {
+  display: block;
+  height: inherit;
+}
+
+.site-sidebar_nav__group__item {
+  display: block;
+  padding: 0.8em 0;
 }
 
 /* Component */
@@ -228,7 +272,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   float: right;
 }
 
-/* リンク装飾 */
+/* 縦スクロール(スクロールバー非表示) */
+.c-scroll_y {
+  position: relative;
+  height: inherit;
+  overflow: hidden;
+}
+
+.c-scroll_y__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-right: 30px;
+  margin-right: -30px;
+  box-sizing: content-box;
+  overflow: scroll;
+}
+
+/* リンク装飾(ヘッダナビ) */
 .c-hover_action {
   display: block;
   text-decoration: none;
@@ -250,6 +313,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .c-hover_action:active {
+  color: inherit;
+}
+
+/* リンク装飾(サイドナビ) */
+.c-hover_action02 {
+  display: block;
+  text-decoration: none;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.c-hover_action02:link {
+  color: inherit;
+}
+
+.c-hover_action02:visited {
+  color: inherit;
+}
+
+.c-hover_action02:hover {
+  color: inherit;
+  background-color: #fff;
+  color: #000;
+  opacity: 0.5;
+}
+
+.c-hover_action02:active {
   color: inherit;
 }
 
@@ -332,23 +421,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-align: center;
 }
 
-/* 縦スクロール(スクロールバー非表示) */
-.c-scroll_y {
+/* 右矢印のリストスタイル */
+.c-list_style_right_arrow {
   position: relative;
-  height: inherit;
-  overflow: hidden;
+  display: block;
+  text-indent: -2em;
+  padding-left: 2em;
 }
 
-.c-scroll_y__inner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-right: 30px;
-  margin-right: -30px;
-  box-sizing: content-box;
-  overflow: scroll;
+.c-list_style_right_arrow::before {
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: scale(0.6) rotate(45deg);
 }
 
 /* Project */
