@@ -47,33 +47,62 @@
         }
     }
     &__nav{
-        ul{
-            @include list_no_indent;
-            @include clearfix;
-            height : inherit;
-            li{
-                float : left;
-                height : inherit;
-                a{
-                    display : block;
-                    height : inherit;
-                }
-            }
-        }
         @include _media_l{
             display : none;
         }
+        ul{
+            @include list_no_indent;
+        }
+
+        & > ul{
+            height : inherit;
+            & > li{
+                float : left;
+                height : inherit;
+                & > ul{
+                    display: none;
+                }
+                &:hover > ul{
+                    display: block;
+                }
+            }
+        }
+
+        &_title{
+            height : inherit;
+            margin : 0;
+            padding : 0;
+            cursor : pointer;
+        }
+
+        a{}
     }
 }
 
-.header_logo{
-}
+.header_logo{}
 
 .header_btn{
     display : block;
     cursor : pointer;
 }
 
-.header_nav{
+.header_nav_title{
     margin : 0 1.6em;
 }
+
+.site-header_nav_inner_list{
+    height : inherit;
+    & > li{
+        height : inherit;
+        background-color : #888;
+    }
+}
+
+.header_nav_item{
+    display : block;
+    text-align : center;
+}
+
+// .header_nav{
+//     margin : 0 1.6em;
+// }
