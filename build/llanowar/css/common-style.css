@@ -128,21 +128,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   cursor: pointer;
 }
 
+.site-header_nav_class__group:hover .site-header_nav_class__title {
+  background-color: #fff;
+  color: #000;
+}
+
 .site-header_nav_class__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: inherit;
-  display: none;
+  height: 0;
+  overflow: hidden;
 }
 
 .site-header_nav_class__group:hover .site-header_nav_class__list {
-  display: block;
+  height: inherit;
+  overflow: visible;
 }
 
 .site-header_nav_class__list__item {
-  height: inherit;
+  height: 60px;
   background-color: #888;
+}
+
+.site-header_nav_class__list__item:not(:last-child) {
+  border-bottom: 1px dotted #000;
 }
 
 .site_header_btn {
@@ -151,12 +161,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .site_header_nav_title {
+  display: block;
   margin: 0 1.6em;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .site_header_nav {
   display: block;
   text-align: center;
+  padding: 0 1em;
+  line-height: 1.4;
 }
 
 .sidebar_flag {
@@ -228,7 +243,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .site-sidebar_nav {
-  lsit-syle: none;
+  list-style: none;
   margin: -6rem 0 0 0;
   padding: 0;
   overflow: hidden;
@@ -242,7 +257,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 0;
   padding: 0;
   font-size: 2.0rem;
-  line-height: 1.4;
+  line-height: 1.8;
 }
 
 .site-sidebar_nav__group {
@@ -266,7 +281,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .site-sidebar_nav__group__item {
   display: block;
-  padding: 0.8em 0;
+  padding: 0.6em 0;
 }
 
 /* Component */
@@ -302,6 +317,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .c-scroll_y {
   position: relative;
   height: inherit;
+  max-height: 100vh;
   overflow: hidden;
 }
 
@@ -448,23 +464,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* 右矢印のリストスタイル */
-.c-list_style_right_arrow {
+/* リンクボタン用右矢印(ボタンの後ろに右矢印) */
+.c-link_style_right_arrow {
   position: relative;
   display: block;
-  text-indent: -2em;
-  padding-left: 2em;
+  padding-right: 2em;
 }
 
-.c-list_style_right_arrow::before {
+.c-link_style_right_arrow::after {
   content: "";
-  vertical-align: middle;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 1em;
-  border-top: 3px solid #000;
-  border-right: 3px solid #000;
-  transform: scale(0.6) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 0.4em;
+  display: block;
+  width: 0.6em;
+  height: 0.6em;
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 /* Project */

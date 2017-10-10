@@ -28,6 +28,7 @@
 .c-scroll_y{
     position : relative;
     height : inherit;
+    max-height : 100vh;
     overflow : hidden;
     &__inner{
         position : absolute;
@@ -161,20 +162,39 @@
 }
 
 /* 右矢印のリストスタイル */
-.c-list_style_right_arrow{
+// .c-list_style_right_arrow{
+//     position : relative;
+//     display : block;
+//     text-indent : -2em;
+//     padding-left : 2em;
+//     &::before{
+//         content : "";
+//         vertical-align : middle;
+//         display : inline-block;
+//         width : 1em;
+//         height : 1em;
+//         margin-right:1em;
+//         border-top : 3px solid #000;
+//         border-right : 3px solid #000;
+//         transform: scale(0.6) rotate(45deg);
+//     }
+// }
+
+/* リンクボタン用右矢印(ボタンの後ろに右矢印) */
+.c-link_style_right_arrow{
     position : relative;
     display : block;
-    text-indent : -2em;
-    padding-left : 2em;
-    &::before{
+    padding-right : 2em;
+    &::after{
         content : "";
-        vertical-align : middle;
-        display : inline-block;
-        width : 1em;
-        height : 1em;
-        margin-right:1em;
-        border-top : 3px solid #000;
-        border-right : 3px solid #000;
-        transform: scale(0.6) rotate(45deg);
+        position : absolute;
+        top : 50%;
+        right : 0.4em;
+        display : block;
+        width : 0.6em;
+        height : 0.6em;
+        border-top : 4px solid #000;
+        border-right : 4px solid #000;
+        transform: translateY(-50%) rotate(45deg);
     }
 }

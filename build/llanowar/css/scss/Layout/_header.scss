@@ -52,28 +52,39 @@
     &__group{
         float : left;
         height : inherit;
+
     }
     &__title{
         height : inherit;
         margin : 0;
         padding : 0;
         cursor : pointer;
+        @at-root{
+            .site-header_nav_class__group:hover &{
+                //QQQ 別箇所に記載
+                background-color : #fff;
+                color : #000;
+            }
+        }
     }
     &__list{
         @include list_no_indent;
-        height : inherit;
-        display: none;
+        height : 0;
+        overflow : hidden;
         @at-root{
             .site-header_nav_class__group:hover &{
-                display: block;
+                height : inherit;
+                overflow : visible;
             }
         }
         &__item{
-            height : inherit;
+            height : 60px;
             background-color : #888;
+            &:not(:last-child){
+                border-bottom : 1px dotted #000;
+            }
         }
     }
-
 }
 
 .site_header_logo{}
@@ -84,10 +95,15 @@
 }
 
 .site_header_nav_title{
+    display : block;
     margin : 0 1.6em;
+    text-align : center;
+    line-height:1.4;
 }
 
 .site_header_nav{
     display : block;
     text-align : center;
+    padding:0 1em;
+    line-height:1.4;
 }
