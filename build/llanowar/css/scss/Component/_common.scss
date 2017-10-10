@@ -6,12 +6,28 @@
     display : table;
     height : 100%;
     width: 100%;
-     &__midle{
+     &__middle{
          display : table-cell;
          vertical-align : middle;
          width: 100%;
      }
 }
+
+/* 縦中央(absolute) */
+// .c-abs_middle{
+//     position : relative;
+//     display: block;
+//     height : 100%;
+//     width : 100%;
+//     &__inner{
+//         position : absolute;
+//         display: block;
+//         top : 50%;
+//         left : 0;
+//         right : 0;
+//         transform: translateY(-50%);
+//     }
+// }
 
 /* 左寄せ、右寄せ(float) */
 .c-float{
