@@ -298,6 +298,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 100%;
 }
 
+/* 縦中央(absolute) */
 /* 左寄せ、右寄せ(float) */
 .c-float::after {
   content: '';

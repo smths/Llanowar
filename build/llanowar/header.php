@@ -11,7 +11,7 @@
 <header id="site-header" class="site-header">
 	<div class="site-header__inner">
 		<div class="site-header_content">
-			<h1 class="site-header_content__logo"><a class="u-height_inherit_block" href="<?php echo home_url(); ?>"><span class="c-table"><span class="c-table__midle"><span class="site_header_logo"><img src="" alt="ロゴ"></span></span></span></a></h1>
+			<h1 class="site-header_content__logo"><a class="u-height_inherit_block" href="<?php echo home_url(); ?>"><span class="c-table"><span class="c-table__middle"><span class="site_header_logo"><img src="" alt="ロゴ"></span></span></span></a></h1>
 			<div class="site-header_content__btn"><span class="c-table"><span class="c-table__midle"><label class="site_header_btn" for="sidebar_flag"><span class="c-hamburger"><span class="c-hamburger__bar"></span><span class="c-hamburger__bar"></span><span class="c-hamburger__bar"></span></span></label></span></span></div>
 			<div class="site-header_content__nav">
 				<ul class="site-header_nav_class">
