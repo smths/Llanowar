@@ -5,9 +5,11 @@
 .c-table{
     display : table;
     height : 100%;
+    width: 100%;
      &__midle{
          display : table-cell;
          vertical-align : middle;
+         width: 100%;
      }
 }
 

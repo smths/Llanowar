@@ -1,18 +1,18 @@
 //main: ../common-style.scss
 @charset "utf-8";
 
-.site-header__outer{
+.site-header{
     height : 60px;
     position : relative;
-}
-.site-header{
-    position : fixed;
-    top : 0;
-    left : 0;
-    width : 100%;
-    height : inherit;
-    background-color : #aaa;
-    color : #fff;
+    &__inner{
+        position : fixed;
+        top : 0;
+        left : 0;
+        width : 100%;
+        height : inherit;
+        background-color : #aaa;
+        color : #fff;
+    }
 }
 
 .site-header_content{
@@ -28,81 +28,66 @@
         line-height : 1;
         float : left;
         height : inherit;
-        a{
-            display : block;
-            height : inherit;
-        }
-    }
-    &__btn,&__nav{
-        float : right;
-        height : inherit;
     }
     &__btn{
-        a{
-            display : block;
-            height : inherit;
-        }
+        float : right;
+        height : inherit;
         @include media_l{
             display : none;
         }
     }
     &__nav{
+        float : right;
+        height : inherit;
         @include _media_l{
             display : none;
         }
-        ul{
-            @include list_no_indent;
-        }
-
-        & > ul{
-            height : inherit;
-            & > li{
-                float : left;
-                height : inherit;
-                & > ul{
-                    display: none;
-                }
-                &:hover > ul{
-                    display: block;
-                }
-            }
-        }
-
-        &_title{
-            height : inherit;
-            margin : 0;
-            padding : 0;
-            cursor : pointer;
-        }
-
-        a{}
     }
 }
 
-.header_logo{}
+.site-header_nav_class{
+    @include list_no_indent;
+    @include clearfix;
+    height : inherit;
+    &__group{
+        float : left;
+        height : inherit;
+    }
+    &__title{
+        height : inherit;
+        margin : 0;
+        padding : 0;
+        cursor : pointer;
+    }
+    &__list{
+        @include list_no_indent;
+        height : inherit;
+        display: none;
+        @at-root{
+            .site-header_nav_class__group:hover &{
+                display: block;
+            }
+        }
+        &__item{
+            height : inherit;
+            background-color : #888;
+        }
+    }
 
-.header_btn{
+}
+
+.site_header_logo{}
+
+.site_header_btn{
     display : block;
     cursor : pointer;
 }
 
-.header_nav_title{
+.site_header_nav_title{
     margin : 0 1.6em;
 }
 
-.site-header_nav_inner_list{
-    height : inherit;
-    & > li{
-        height : inherit;
-        background-color : #888;
-    }
-}
-
-.header_nav_item{
+.site_header_nav{
     display : block;
     text-align : center;
 }
-
-// .header_nav{
-//     margin : 0 1.6em;
-// }

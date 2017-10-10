@@ -41,12 +41,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* リンクホバーカラー */
 /* Function（関数） */
 /* Layout */
-.site-header__outer {
+.site-header {
   height: 60px;
   position: relative;
 }
 
-.site-header {
+.site-header__inner {
   position: fixed;
   top: 0;
   left: 0;
@@ -81,18 +81,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: inherit;
 }
 
-.site-header_content__logo a {
-  display: block;
-  height: inherit;
-}
-
-.site-header_content__btn, .site-header_content__nav {
+.site-header_content__btn {
   float: right;
-  height: inherit;
-}
-
-.site-header_content__btn a {
-  display: block;
   height: inherit;
 }
 
@@ -102,61 +92,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+.site-header_content__nav {
+  float: right;
+  height: inherit;
+}
+
 @media all and (max-width: 991px) {
   .site-header_content__nav {
     display: none;
   }
 }
 
-.site-header_content__nav ul {
+.site-header_nav_class {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.site-header_content__nav > ul {
   height: inherit;
 }
 
-.site-header_content__nav > ul > li {
+.site-header_nav_class::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.site-header_nav_class__group {
   float: left;
   height: inherit;
 }
 
-.site-header_content__nav > ul > li > ul {
-  display: none;
-}
-
-.site-header_content__nav > ul > li:hover > ul {
-  display: block;
-}
-
-.site-header_content__nav_title {
+.site-header_nav_class__title {
   height: inherit;
   margin: 0;
   padding: 0;
   cursor: pointer;
 }
 
-.header_btn {
-  display: block;
-  cursor: pointer;
-}
-
-.header_nav_title {
-  margin: 0 1.6em;
-}
-
-.site-header_nav_inner_list {
+.site-header_nav_class__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   height: inherit;
+  display: none;
 }
 
-.site-header_nav_inner_list > li {
+.site-header_nav_class__group:hover .site-header_nav_class__list {
+  display: block;
+}
+
+.site-header_nav_class__list__item {
   height: inherit;
   background-color: #888;
 }
 
-.header_nav_item {
+.site_header_btn {
+  display: block;
+  cursor: pointer;
+}
+
+.site_header_nav_title {
+  margin: 0 1.6em;
+}
+
+.site_header_nav {
   display: block;
   text-align: center;
 }
@@ -192,6 +190,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   right: 0;
   display: inline-block;
   height: inherit;
+  cursor: pointer;
   background-color: #000;
   padding: 0 10px;
 }
@@ -222,6 +221,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .site-sidebar__main__inner {
   padding: 4.0rem 0;
+}
+
+.site-sidebar_close_btn {
+  cursor: pointer;
 }
 
 .site-sidebar_nav {
@@ -271,11 +274,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .c-table {
   display: table;
   height: 100%;
+  width: 100%;
 }
 
 .c-table__midle {
   display: table-cell;
   vertical-align: middle;
+  width: 100%;
 }
 
 /* 左寄せ、右寄せ(float) */
@@ -470,4 +475,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .u-height_100 {
   height: 100%;
+}
+
+.u-height_inherit_block {
+  display: block;
+  height: inherit;
 }
